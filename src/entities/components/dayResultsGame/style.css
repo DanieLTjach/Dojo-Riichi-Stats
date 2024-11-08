@@ -1,0 +1,25 @@
+
+.app__main_dayResultsGame_item{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    p{
+        text-align: center;
+    }
+
+    span{
+        text-align: right;
+        padding-top: 5px;
+    }
+}
+
+.app__main_dayResultsGame_item_players{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-items: center;
+}
