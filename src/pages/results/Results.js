@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./style.css";
-import DayResultsGame from "../../entities/components/dayResultsGame/DayResultsGame";
+import DayResultsGame from "../../components/dayResultsGame/DayResultsGame";
 import dayGamesList from "../../entities/utils/dayGamesList";
 
 const Results = () => {
@@ -37,6 +37,7 @@ const Results = () => {
                 <h2>Останні ігри за день</h2>
                 <div className="app__main_dayResultsGame_list">
                     {
+                        currentItems.length === 0 ? <p>Ігор не знайдено</p> :
                         currentItems.map((game) => (
                             <DayResultsGame key={game.id} game={game} />
                         ))

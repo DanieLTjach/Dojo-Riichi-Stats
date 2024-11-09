@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Player from "../../entities/components/player/Player";
+import PlayersCard from "../../components/playerCard/PlayersCard";
 import playerList from "../../entities/utils/playersList";
 import "./style.css";
 
@@ -52,15 +52,20 @@ return (
             </select>
         </div>
         <div className="players">
-            <button className="pagination__btn" onClick={() => paginate(currentPage - 1)} disabled={currentPage === 1}>&lt;</button>
-            <div className="players__content">
-                {
-                    sortedItems.map((player) => (
-                    <Player key={player.id} id={player.id} nickname={player.name} games={player.gamesPlayed}/>
-                    ))
-                }   
-            </div>
-            <button className="pagination__btn" onClick={() => paginate(currentPage + 1)} disabled={currentPage === Math.ceil(totalItems / itemsPerPage)}>&gt;</button>
+            { 
+                sortedItems.length === 0 ? <p style={{fontSize: 30 + 'px', fontWeight: 600}}>Гравців не знайдено</p> :
+                <>
+                    <button className="pagination__btn" onClick={() => paginate(currentPage - 1)} disabled={currentPage === 1}>&lt;</button>
+                    <div className="players__content">
+                        {
+                            sortedItems.map((player) => (
+                                <PlayersCard key={player.id} id={player.id} nickname={player.name} games={player.gamesPlayed}/>
+                            ))
+                        }   
+                    </div>
+                    <button className="pagination__btn" onClick={() => paginate(currentPage + 1)} disabled={currentPage === Math.ceil(totalItems / itemsPerPage)}>&gt;</button>
+                </>
+            }
         </div>
     </div>
 );
