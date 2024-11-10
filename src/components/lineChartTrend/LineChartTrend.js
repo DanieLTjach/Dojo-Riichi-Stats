@@ -2,7 +2,7 @@ import React from "react";
 import { Line } from "react-chartjs-2";
 import "./style.css";
 
-function LineChart({ chartData}) {
+function LineChartTrend({ chartData}) {
     return (
         <div className="chart-container">
             <h3>Trends</h3>
@@ -38,4 +38,4 @@ function LineChart({ chartData}) {
     );
 }
 
-export default LineChart;
+export default LineChartTrend;

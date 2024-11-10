@@ -1,0 +1,10 @@
+.chart-containerRating{
+    width: 800px;
+    height: 300px;
+    padding-bottom: 50px;
+    padding-left: 70px;
+
+    h3{
+        text-align: center;
+    }
+}
