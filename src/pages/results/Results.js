@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./style.css";
 import DayResultsGame from "../../components/dayResultsGame/DayResultsGame";
 import dayGamesList from "../../entities/utils/dayGamesList";
+import dayResultsUserList from "../../entities/utils/dayResultUserList";
+import DayResultUser from "../../components/dayResultUser/DayResultUser";
 
 const Results = () => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -23,14 +25,15 @@ const Results = () => {
             <div className="app__main_dayResultsUser">
                 <h2>Результати гравців за день</h2>
                 <div className="app__main_dayResultsUser_list">
-                <div className="app__main_dayResultsUser_list_title">
-                    <p>Гравець:</p>
-                    <span>Результат:</span>
-                </div>
-                <div className="app__main_dayResultsUser_item">
-                    <p>Nickname</p>
-                    <span>-12</span>
-                </div>
+                    <div className="app__main_dayResultsUser_list_title">
+                        <p>Гравець:</p>
+                        <span>Результат:</span>
+                    </div>
+                    {
+                        dayResultsUserList.map((user) => {
+                            return <DayResultUser key={user.id} user={user} />
+                        })
+                    }
                 </div>
             </div>
             <div className="app__main_dayResultsGame">
