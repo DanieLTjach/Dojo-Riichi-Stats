@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import PlayersCard from "../../components/playerCard/PlayersCard";
-import playerList from "../../entities/utils/playersList";
 import "./style.css";
 
-const Statistics = () => {
+const Statistics = ({ playerList }) => {
     const [currentPage, setCurrentPage] = useState(1);
     const [sortOption, setSortOption] = useState("default");
     const [sortedItems, setSortedItems] = useState([]);
@@ -15,26 +14,26 @@ const Statistics = () => {
     useEffect(() => {
         let sortedList = [...playerList];
         switch (sortOption) {
-        case "default":
-            sortedList.sort((a, b) => a.id - b.id);
-            break;
-        case "active":
-            sortedList.sort((a, b) => b.gamesPlayed - a.gamesPlayed);
-            break;
-        case "inactive":
-            sortedList.sort((a, b) => a.gamesPlayed - b.gamesPlayed);
-            break;
-        default:
-            break;
-    }
-
-    const indexOfLastItem = currentPage * itemsPerPage;
-    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-    const currentItems = sortedList.slice(indexOfFirstItem, indexOfLastItem);
-
-    setSortedItems(currentItems);
-
-    }, [sortOption, currentPage]);
+            case "default":
+                sortedList.sort((a, b) => a.id - b.id);
+                break;
+            case "active":
+                sortedList.sort((a, b) => b.playerStats.gamesPlayed - a.playerStats.gamesPlayed);
+                break;
+            case "inactive":
+                sortedList.sort((a, b) => a.playerStats.gamesPlayed - b.playerStats.gamesPlayed);
+                break;
+            default:
+                break;
+        }
+    
+        const indexOfLastItem = currentPage * itemsPerPage;
+        const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+        const currentItems = sortedList.slice(indexOfFirstItem, indexOfLastItem);
+    
+        setSortedItems(currentItems);
+    
+    }, [sortOption, currentPage, playerList]);
 
     const handleSortChange = (e) => {
         setSortOption(e.target.value);
@@ -53,13 +52,13 @@ return (
         </div>
         <div className="players">
             { 
-                sortedItems.length === 0 ? <p style={{fontSize: 30 + 'px', fontWeight: 600}}>Гравців не знайдено</p> :
+                sortedItems.length === 0 ? <p className="loader">Loading...</p> :
                 <>
                     <button className="pagination__btn" onClick={() => paginate(currentPage - 1)} disabled={currentPage === 1}>&lt;</button>
                     <div className="players__content">
                         {
-                            sortedItems.map((player) => (
-                                <PlayersCard key={player.id} id={player.id} nickname={player.name} games={player.gamesPlayed}/>
+                            sortedItems.map((player, index) => (
+                                <PlayersCard key={index} id={player.id} nickname={player.name} games={player.playerStats.gamesPlayed}/>
                             ))
                         }   
                     </div>
