@@ -1,0 +1,15 @@
+.app__header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    padding: 10px 20px;
+    background-color: rgb(40, 44, 47);
+}
+
+.app__heeader_title{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+}

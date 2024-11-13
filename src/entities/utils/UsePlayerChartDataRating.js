@@ -5,7 +5,7 @@ const UsePlayerChartDataRating = (player) => {
         labels: player.playerStats.ratingChange.map((ratingChange) => ratingChange.date),
         datasets: [
             {
-                label: "Player Position",
+                label: "Rating Change",
                 data: player.playerStats.ratingChange.map((ratingChange) => ratingChange.change),
                 borderColor: "red",
                 backgroundColor: "red",

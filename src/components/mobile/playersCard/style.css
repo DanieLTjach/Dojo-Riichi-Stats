@@ -1,0 +1,30 @@
+.mobile__players{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile__players_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 100px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+
+    /* @media screen and (max-width: 375px){
+        width: 100px;
+        height: 70px;
+    } */
+
+    &:hover{
+        transform: scale(1.05);
+    }
+}

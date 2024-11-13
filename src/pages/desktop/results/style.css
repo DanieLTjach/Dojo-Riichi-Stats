@@ -1,0 +1,92 @@
+.app__main_results{
+    display: flex;
+    width: 85%;
+}
+
+.app__main_dayResultsUser{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding-right: 10px;
+
+    h2{
+        text-align: center;
+        padding: 40px;
+    }
+}
+
+.app__main_dayResultsUser_list_title{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+
+    p{
+        width: 50%;
+        border-right: 1px solid #ccc;
+        text-align: center;
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        unicode-bidi: isolate;
+        text-align: center;
+    }
+
+    span{
+        width: 50%;
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        unicode-bidi: isolate;
+        text-align: center;
+    }
+}
+
+.app__main_dayResultsGame{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding-left: 10px;
+
+    h2{
+        text-align: center;
+        padding: 40px;
+    }
+}
+
+.app__main_dayResultsGame_list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 40px;
+}
+
+.app__main_dayResultsGame_pagination{
+    position: absolute;
+    bottom: 0;
+    left: 71%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.app__main_dayResultsGame_pagination_btn{
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.app__main_dayResultsGame_pagination_btn:hover{
+    background-color: #ccc;
+}
+
+.app__main_dayResultsGame_pagination_btn.active{
+    background-color: #ccc;
+}

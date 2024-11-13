@@ -1,0 +1,34 @@
+.mobile__main_player{
+    padding: 10px;
+    background-color: #f2f2f2;
+}
+
+.mobile__main_player_title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.mobile__main_player_trends{
+    p {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+}
+
+.mobile__main_player_raitingChange_info{
+    div {
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+
+        span {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+    }
+}

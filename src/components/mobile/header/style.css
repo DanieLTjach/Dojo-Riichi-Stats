@@ -1,0 +1,19 @@
+.mobile__app_header {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(40, 44, 47);
+
+    @media (max-width: 360px) {
+        width: 100%;
+    }
+}
+
+.mobile__app_heeader_title {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}

@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./index.css";
-import Header from "./components/header/Header";
-import Aside from "./components/aside/Aside";
-import Statistics from "./pages/statistics/Statistics";
-import Results from "./pages/results/Results";
-import Player from "./pages/player/Player";
+import Header from "./components/desktop/header/Header";
+import Aside from "./components/desktop/aside/Aside";
+import Statistics from "./pages/desktop/statistics/Statistics";
+import Results from "./pages/desktop/results/Results";
+import Player from "./pages/desktop/player/Player";
 
 function App() {
   const [playerList, setPlayerList] = useState([]);

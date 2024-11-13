@@ -1,0 +1,18 @@
+.mobile__main_userItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 15px;
+
+    p{
+        width: 50%;
+        font-size: 20px;
+    }
+
+    span{
+        width: 50%;
+        font-size: 20px;
+        text-align: center;
+    }
+}
