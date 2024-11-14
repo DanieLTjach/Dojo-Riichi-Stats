@@ -20,8 +20,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+}
 
-    .app__main_dayResultsGame_item_player{
-        padding-left: 5px;
-    }
+.app__main_dayResultsGame_item_player{
+    padding-left: 5px;
 }

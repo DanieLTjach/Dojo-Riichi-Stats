@@ -19,10 +19,10 @@
     cursor: pointer;
     transition: all 0.2s ease-in;
 
-    /* @media screen and (max-width: 375px){
+    @media screen and (max-width: 375px){
         width: 100px;
         height: 70px;
-    } */
+    }
 
     &:hover{
         transform: scale(1.05);
