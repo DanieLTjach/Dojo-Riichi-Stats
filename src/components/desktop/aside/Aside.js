@@ -14,7 +14,7 @@ const Aside = () => {
                 <ul>
                     <NavLink to="/" className={() => {return window.location.pathname === "/" ? activeLink : inactiveLink}}>
                         <img src={cube} alt="cube" />
-                        <span>Сьогоднішні результати</span>
+                        <span>Останні результати</span>
                     </NavLink>
                     <NavLink to="/statistics" className={() => {return window.location.pathname === "/statistics" ? activeLink : inactiveLink}}>
                         <img src={statistics} alt="statistics" />

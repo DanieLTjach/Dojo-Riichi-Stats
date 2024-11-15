@@ -23,7 +23,7 @@ const PopupMenu = () => {
                 <ul id="menu">
                     <li>
                         <NavLink to="/" onClick={handleLinkClick}>
-                            <label for="menuCheckbox">Сьогоднішні результати</label>
+                            <label for="menuCheckbox">Останні результати</label>
                         </NavLink>
                     </li>
                     <li>

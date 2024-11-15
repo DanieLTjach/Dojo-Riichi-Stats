@@ -9,7 +9,7 @@ p {
 
 #menuToggle {
   display: block;
-  position: absolute;
+  position: sticky;
   top: 20px;
   left: 20px;
 
