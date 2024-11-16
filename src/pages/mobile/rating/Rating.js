@@ -3,9 +3,9 @@ import "./style.css";
 
 const Rating = () => {
     return (
-        <div className="rating">
-            <h1 className="rating__title">Rating</h1>
-            <table className="rating__table">
+        <div className="mobile__rating">
+            <h1 className="mobile__rating_title">Rating</h1>
+            <table className="mobile__rating_table">
                 <thead>
                     <tr>
                         <th>#</th>

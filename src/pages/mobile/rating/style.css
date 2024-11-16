@@ -1,17 +1,17 @@
-.rating{
+.mobile__rating{
     width: 100%;
     height: 100%;
     margin: 20px 10px;
 }
 
-.rating__title{
+.mobile__rating_title{
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 10px;
     text-align: center;
 }
 
-.rating__table{
+.mobile__rating_table{
     width: 100%;
     border-collapse: collapse;
 
