@@ -31,6 +31,11 @@ const PopupMenu = () => {
                             <label for="menuCheckbox">Статистика гравців</label>
                         </NavLink>
                     </li>
+                    <li>
+                        <NavLink to="/rating" onClick={handleLinkClick}>
+                            <label for="menuCheckbox">Загальний рейтинг</label>
+                        </NavLink>
+                    </li>
                 </ul>
             </div>
         </nav>

@@ -1,6 +1,7 @@
 import "./style.css"
 import cube from "../../../assets/aside/cube.svg"
 import statistics from "../../../assets/aside/statisctics.svg"
+import rating from "../../../assets/aside/rating.svg"
 import { NavLink } from "react-router-dom"
 
 const Aside = () => {
@@ -19,6 +20,10 @@ const Aside = () => {
                     <NavLink to="/statistics" className={() => {return window.location.pathname === "/statistics" ? activeLink : inactiveLink}}>
                         <img src={statistics} alt="statistics" />
                         <span>Статистика гравців</span>
+                    </NavLink>
+                    <NavLink to="/rating" className={() => {return window.location.pathname === "/rating" ? activeLink : inactiveLink}}>
+                        <img src={rating} alt="rating" />
+                        <span>Загальний рейтинг</span>
                     </NavLink>
                 </ul>
             </div>

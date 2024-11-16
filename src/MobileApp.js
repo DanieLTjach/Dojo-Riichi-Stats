@@ -5,6 +5,7 @@ import Header from "./components/mobile/header/Header";
 import Results from "./pages/mobile/results/Results";
 import Statistics from "./pages/mobile/statistics/Statistics";
 import Player from "./pages/mobile/player/Player";
+import Rating from "./pages/mobile/rating/Rating";
 
 function App() {
     const [playerList, setPlayerList] = useState([]);
@@ -35,6 +36,7 @@ function App() {
                         <Route path="/" element={<Results />} />
                         <Route path="/statistics" element={<Statistics playerList={playerList} />} />
                         <Route path="/player/:id" element={<Player playerList={playerList} />} />
+                        <Route path="/rating" element={<Rating />} />
                     </Routes>
                 </div>
             </div>

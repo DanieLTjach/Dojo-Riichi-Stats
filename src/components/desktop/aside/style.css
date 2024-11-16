@@ -27,10 +27,7 @@
     background-color: rgba(224, 224, 224, 0.3);
     cursor: pointer;
     transition: all 0.2s ease-in;
-
-    &:last-child{
-        margin-top: 10px;
-    }
+    margin-bottom: 10px;
 
     img {
         width: 30px;

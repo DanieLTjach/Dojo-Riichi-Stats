@@ -6,6 +6,7 @@ import Aside from "./components/desktop/aside/Aside";
 import Statistics from "./pages/desktop/statistics/Statistics";
 import Results from "./pages/desktop/results/Results";
 import Player from "./pages/desktop/player/Player";
+import Rating from "./pages/desktop/rating/Rating";
 
 function App() {
   const [playerList, setPlayerList] = useState([]);
@@ -38,6 +39,7 @@ function App() {
               <Route path="/" element={<Results />} />
               <Route path="/statistics" element={<Statistics playerList={playerList}/>} />
               <Route path="/player/:id" element={<Player playerList={playerList}/>} />
+              <Route path="/rating" element={<Rating />} />
             </Routes>
 
         </div>

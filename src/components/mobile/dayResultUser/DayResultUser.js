@@ -4,7 +4,7 @@ const DayResultUser = (props) => {
     return (
         <div className="mobile__main_userItem">
             <p>{props.user.UserName}</p>
-            <span>{props.user.RatingChange}</span>
+            <span>{parseFloat(props.user.RatingChange).toFixed(1)}</span>
         </div>
     );
 }
