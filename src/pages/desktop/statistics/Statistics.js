@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import PlayersCard from "../../../components/mobile/playersCard/PlayersCard";
 import  usePlayerPagination  from "../../../entities/utils/usePlayerPagination";
 import "./style.css";
@@ -29,7 +29,7 @@ return (
         </div>
         <div className="players">
             { 
-                sortedItems.length === 0 ? <p className="loader">Loading...</p> :
+                sortedItems.length === 0 ? <p className="loader">Завантаження...</p> :
                 <>
                     <button className="pagination__btn" onClick={() => paginate(currentPage - 1)} disabled={currentPage === 1}>&lt;</button>
                     <div className="players__content">

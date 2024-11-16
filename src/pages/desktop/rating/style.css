@@ -1,7 +1,7 @@
 .rating{
     width: 85%;
     height: 100%;
-    margin: 20px 10px;
+    margin: 15px 10px;
 }
 
 .rating__title{
@@ -17,13 +17,38 @@
 
     th{
         padding: 10px;
-        border: 1px solid #000;
+        border: 1px solid #ccc;
         text-align: center;
     }
 
     td{
         padding: 10px;
-        border: 1px solid #000;
+        border: 1px solid #ccc;
         text-align: center;
     }
+}
+
+.rating__pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 15px;
+    left: 55%;
+}
+
+.rating__pagination_btn{
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.rating__pagination_btn.active{
+    background-color: #ccc;
+}
+
+.rating__pagination_btn:hover{
+    background-color: #ccc;
 }

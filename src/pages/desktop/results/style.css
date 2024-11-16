@@ -90,3 +90,21 @@
 .app__main_dayResultsGame_pagination_btn.active{
     background-color: #ccc;
 }
+
+.app__main_dayResultsUser_pagination{
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.app__main_dayResultsUser_pagination{
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}

@@ -68,6 +68,7 @@ const useResultsData = () => {
         countPagesGame,
         paginateGame,
         dayGamesList,
+        userList,
     };
 };
 

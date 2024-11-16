@@ -16,7 +16,7 @@ const Player = ({ playerList }) => {
     const player = playerList.find(player => player.id === id);
 
     if(!player) {
-        return <p className="loader">Loading...</p>
+        return <p className="loader">Завантаження...</p>
     }
 
     const chartDataTrend = trendChartData(player);
@@ -28,7 +28,7 @@ const Player = ({ playerList }) => {
             <div className="app__main_player_content">
                 <div className="app__main_player_trends">
                     <LineChartTrend chartData={chartDataTrend}/>
-                    <h2>Player Stats:</h2>
+                    <h2>Статистика гравця:</h2>
                     <p>Місце у рейтингу: {player.playerStats.place}</p>
                     <p>Рейтинг гравця: {parseFloat(player.playerStats.player_rating).toFixed(1)}</p>
                     <p>Кількість ігр: {player.playerStats.gamesPlayed}</p>

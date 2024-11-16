@@ -5,7 +5,7 @@ import "./style.css";
 function LineChartRating({ chartData }) {
     return (
         <div className="chart-containerRating">
-            <h3>Rating Change</h3>
+            <h3>Графік зміни рейтингу</h3>
             <Line
                 data={chartData}
                 options={{

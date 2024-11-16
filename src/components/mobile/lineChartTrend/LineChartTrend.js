@@ -5,7 +5,7 @@ import "./style.css";
 function LineChartTrend({ chartData}) {
     return (
         <div className="mobile_chart-container">
-            <h3>Trends</h3>
+            <h3>Графік останніх 10 ігор</h3>
             <Line
                 data={chartData}
                 options={{

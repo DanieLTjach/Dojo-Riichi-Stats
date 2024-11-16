@@ -6,7 +6,7 @@ const PlayersCard = (props) => {
         <div className="players">
             <NavLink to={`/player/${props.id}`} className="players__info">
                 <p>{props.nickname}</p>
-                <span>{props.games} games played</span>
+                <span>зіграно ігор: {props.games}</span>
             </NavLink>
         </div>
     );

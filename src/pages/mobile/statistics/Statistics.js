@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import  usePlayerPagination  from "../../../entities/utils/usePlayerPagination";
 import PlayersCard from "../../../components/mobile/playersCard/PlayersCard";
 
@@ -25,7 +25,7 @@ return (
         </div>
         <div className="mobile__statistics_content_players">
             {
-                sortedItems.length === 0 ? <p className="loader">Loading...</p> :
+                sortedItems.length === 0 ? <p className="loader">Завантаження...</p> :
                 sortedItems.map((player, index) => (
                     <PlayersCard key={index} id={player.id} nickname={player.name} games={player.playerStats.gamesPlayed}/>
                 ))

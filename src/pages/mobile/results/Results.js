@@ -5,7 +5,7 @@ import DayResultGame from "../../../components/mobile/dayResultsGame/DayResultsG
 import "./style.css"
 
 const Result = () => {
-    const {currentUsers,currentGame} = useResultsData();
+    const {userList,dayGamesList} = useResultsData();
     const [activeTab, setActiveTab] = useState("users");
 
     return (
@@ -24,8 +24,8 @@ const Result = () => {
                                 <p>Результат:</p>
                             </div>
                                 {
-                                    currentUsers.length === 0 ? <p className="loader">Loading...</p> :
-                                    currentUsers.map((user, index) => (
+                                    userList.length === 0 ? <p className="loader">Завантаження...</p> :
+                                    userList.map((user, index) => (
                                         <DayResultUser key={index} user={user} />
                                     ))
                                 }
@@ -33,8 +33,8 @@ const Result = () => {
                     ) : (
                         <div className="mobile__result_main_content_gameItem">
                             {
-                                currentGame.length === 0 ? <p className="loader">Loading...</p> :
-                                currentGame.map((game, index) => (
+                                dayGamesList.length === 0 ? <p className="loader">Завантаження...</p> :
+                                dayGamesList.map((game, index) => (
                                     <DayResultGame key={index} game={game} />
                                 ))
                             }
