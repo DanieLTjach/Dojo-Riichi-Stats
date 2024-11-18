@@ -8,6 +8,8 @@ const Result = () => {
     const {userList,dayGamesList} = useResultsData();
     const [activeTab, setActiveTab] = useState("users");
 
+    userList.sort((a, b) => b.RatingChange - a.RatingChange);
+
     return (
         <main className="mobile__result_main">
             <div className="mobile__result_main_nav">

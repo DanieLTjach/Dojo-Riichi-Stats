@@ -38,7 +38,7 @@ const Player = ({ playerList }) => {
                     <LineChartRating chartData={chartDataRating}/>
                     <div className="mobile__main_player_raitingChange_info">
                         <div>
-                            <span>Середніа інкремент: {player.playerStats.average_increment}</span>
+                            <span>Середній інкремент: {player.playerStats.average_increment}</span>
                             <span>Середнє місце: {player.playerStats.average_place}</span>
                         </div>
                         <div>
@@ -46,7 +46,7 @@ const Player = ({ playerList }) => {
                             <span>Відсоток 2 місць: {parseFloat(player.playerStats.persentageSecondPlace).toFixed(1)}%</span>
                             <span>Відсоток 3 місць: {parseFloat(player.playerStats.persentageThirdPlace).toFixed(1)}%</span>
                             <span>Відсоток 4 місць: {parseFloat(player.playerStats.persentageFourthPlace).toFixed(1)}%</span>
-                            <span>Відсоток з негативного рейтингу: {parseFloat(player.playerStats.persentageOfNegativeRank).toFixed(1)}%</span>
+                            <span>Відсоток ігор з негативним рахунком: {parseFloat(player.playerStats.persentageOfNegativeRank).toFixed(1)}%</span>
                         </div>
                         <div>
                             <span>Відсоток зігранних ігор від усіх: {parseFloat(player.playerStats.persentageOfGamesPlayedFromAll).toFixed(1)}%</span>
@@ -54,9 +54,9 @@ const Player = ({ playerList }) => {
                             <span>Сума заробленого рейтингу: {parseFloat(player.playerStats.amountOfRatingEarned).toFixed(1)}</span>
                         </div>
                         <div>
-                            <span>Max очков: {player.playerStats.maxPoints}</span>
-                            <span>Min очков: {player.playerStats.minPoints}</span>
-                            <span>Середня кількість очків: {player.playerStats.averangePoints}</span>
+                            <span>Max очок: {player.playerStats.maxPoints}</span>
+                            <span>Min очок: {player.playerStats.minPoints}</span>
+                            <span>Середня кількість очок: {player.playerStats.averangePoints}</span>
                         </div>
                     </div>
                 </div>

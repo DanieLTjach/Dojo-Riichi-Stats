@@ -17,6 +17,8 @@ const Results = () => {
         dayGamesList,
     } = useResultsData();
 
+    currentUsers.sort((a, b) => b.RatingChange - a.RatingChange);
+    
     return (
         <div className="app__main_results">
             <div className="app__main_dayResultsUser">
