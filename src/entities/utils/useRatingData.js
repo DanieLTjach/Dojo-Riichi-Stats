@@ -7,7 +7,7 @@ const useRatingData = () => {
     useEffect(() => {
         async function fetchAllUsers() {
             try {
-                const response = await fetch("http://195.189.226.59:5500/getAllUsers");
+                const response = await fetch("https://dojo-stats.pp.ua/api/getAllUsers");
                 if (!response.ok) {
                     throw new Error("Failed to fetch rating data");
                 }

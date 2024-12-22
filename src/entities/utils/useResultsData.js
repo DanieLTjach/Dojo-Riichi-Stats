@@ -10,7 +10,7 @@ const useResultsData = () => {
     useEffect(() => {
         async function getResultsUser() {
             try {
-                const response = await fetch('http://195.189.226.59:5500/getLastDayGames');
+                const response = await fetch('https://dojo-stats.pp.ua/api/getLastDayGames');
                 if (!response.ok) {
                     throw new Error('Failed to fetch data');
                 }
