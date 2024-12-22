@@ -14,7 +14,7 @@ function App() {
   // fetch data
   async function getPlayerList() {
       try {
-          const response = await fetch('http://195.189.226.59:5500/getUsers');
+          const response = await fetch('https://dojo-stats.pp.ua/api/getUsers');
           if (!response.ok) {
               throw new Error('Failed to fetch data');
           }
