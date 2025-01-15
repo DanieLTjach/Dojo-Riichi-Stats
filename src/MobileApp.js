@@ -18,7 +18,8 @@ function App() {
                 throw new Error('Failed to fetch data');
             }
             const data = await response.json();
-            setPlayerList(data);
+            const filteredData = data.filter(player => player.playerStats.gamesPlayed > 1);
+            setPlayerList(filteredData);
         } catch (error) {
             console.error("Ошибка: " + error);
         }

@@ -12,7 +12,8 @@ const useRatingData = () => {
                     throw new Error("Failed to fetch rating data");
                 }
                 const data = await response.json();
-                setRatingData(data);
+                const filteredData = data.filter(player => player.Rating !== 1000);
+                setRatingData(filteredData);
             }
             catch (error) {
                 console.error("Error fetching rating data", error);
