@@ -6,6 +6,7 @@ export const playerEmojis = {
   'Rina': '🐿️',
   'Kyrylo R': '🧢',
   'Hema Vlasova': '🐉',
+  'Vira K': '🦦',
   'Ihor Strumetskyi': '💎'
 };
 
