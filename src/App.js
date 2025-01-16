@@ -20,6 +20,7 @@ function App() {
           }
           const data = await response.json();
           const filteredData = data.filter(player => player.playerStats.gamesPlayed > 1);
+          const filteredData = data.filter(player => player.playerStats.gamesPlayed > 0);
           setPlayerList(filteredData);
       } catch (error) {
           console.error("Ошибка: " + error);
