@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { addEmojiToName } from './playerEmojis';
 
 const useRatingData = () => {
     const [ratingData, setRatingData] = useState(null);
@@ -13,6 +14,9 @@ const useRatingData = () => {
                 }
                 const data = await response.json();
                 const filteredData = data.filter(player => player.Rating !== 1000);
+                filteredData.forEach(player => {
+                    player.Name = addEmojiToName(player.Name);
+                });
                 setRatingData(filteredData);
             }
             catch (error) {
@@ -21,6 +25,7 @@ const useRatingData = () => {
         }
         fetchAllUsers();
     }, []);
+
 
     const itemsPerPage = 14;
     const totalUsers = ratingData ? ratingData.length : 0;
