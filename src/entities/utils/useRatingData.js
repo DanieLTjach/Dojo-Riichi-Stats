@@ -26,8 +26,8 @@ const useRatingData = () => {
         fetchAllUsers();
     }, []);
 
-
     const itemsPerPage = 14;
+
     const totalUsers = ratingData ? ratingData.length : 0;
     const indexOfLastUser = currentPageUser * itemsPerPage;
     const indexOfFirstUser = indexOfLastUser - itemsPerPage;

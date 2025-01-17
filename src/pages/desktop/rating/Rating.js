@@ -9,6 +9,14 @@ const Rating = () => {
 
     return (
         <div className="rating">
+            <span className="mobile__rating_season">
+                <span>Сезон:</span>
+                <select>
+                    <option value="season1">Сезон 1</option>
+                    <option value="season2">Сезон 2</option>
+                    <option value="season3">Сезон 3</option>
+                </select>
+            </span>
             <h1 className="rating__title">Таблиця загального рейтингу</h1>
             <table className="rating__table">
                 <thead>

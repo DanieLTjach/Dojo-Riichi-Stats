@@ -24,6 +24,14 @@ const Player = ({ playerList }) => {
 
     return (
         <main className="mobile__main_player">
+            <div className="app__main_player_season">
+                <span>Сезон:</span>
+                <select>
+                    <option value="season1">Сезон 1</option>
+                    <option value="season2">Сезон 2</option>
+                    <option value="season3">Сезон 3</option>
+                </select>
+            </div>
             <div className="mobile__main_player_title">{player.name}: {player.id}</div>
             <div className="mobile__main_player_content">
                 <div className="mobile__main_player_trends">
