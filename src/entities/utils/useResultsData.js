@@ -1,10 +1,26 @@
 import { useState, useEffect } from "react";
+import { addEmojiToName } from './playerEmojis';
 
 const useResultsData = () => {
     const [currentPageUser, setCurrentPageUser] = useState(1);
     const [currentPageGame, setCurrentPageGame] = useState(1);
     const [dayGamesList, setDayGamesList] = useState([]);
     const [userList, setUserList] = useState([]);
+    const addEmojisToGames = (games) => {
+      return games.map(game => {
+        const newGame = { ...game };
+        for (let i = 1; i <= 4; i++) {
+          const playerKey = `player_${i}`;
+          if (newGame[playerKey]) {
+            newGame[playerKey] = {
+              ...newGame[playerKey],
+              UserName: addEmojiToName(newGame[playerKey].UserName)
+            };
+          }
+        }
+        return newGame;
+      });
+    };
 
     // fetch data
     useEffect(() => {
@@ -14,7 +30,8 @@ const useResultsData = () => {
                 if (!response.ok) {
                     throw new Error('Failed to fetch data');
                 }
-                const data = await response.json();
+                let data = await response.json();
+                data = addEmojisToGames(data);
                 setDayGamesList(data);
 
                 // Calculate RatingChange for each user

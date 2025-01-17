@@ -7,6 +7,7 @@ import Statistics from "./pages/desktop/statistics/Statistics";
 import Results from "./pages/desktop/results/Results";
 import Player from "./pages/desktop/player/Player";
 import Rating from "./pages/desktop/rating/Rating";
+import { addEmojiToName } from './entities/utils/playerEmojis';
 
 function App() {
   const [playerList, setPlayerList] = useState([]);
@@ -19,7 +20,11 @@ function App() {
               throw new Error('Failed to fetch data');
           }
           const data = await response.json();
-          setPlayerList(data); 
+          const filteredData = data.filter(player => player.playerStats.gamesPlayed > 0);
+          filteredData.forEach(player => {
+            player.name = addEmojiToName(player.name);
+          });
+          setPlayerList(filteredData);
       } catch (error) {
           console.error("Ошибка: " + error);
       }

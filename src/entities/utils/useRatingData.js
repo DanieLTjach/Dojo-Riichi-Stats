@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { addEmojiToName } from './playerEmojis';
 
 const useRatingData = () => {
     const [ratingData, setRatingData] = useState(null);
@@ -12,7 +13,11 @@ const useRatingData = () => {
                     throw new Error("Failed to fetch rating data");
                 }
                 const data = await response.json();
-                setRatingData(data);
+                const filteredData = data.filter(player => player.Rating !== 1000);
+                filteredData.forEach(player => {
+                    player.Name = addEmojiToName(player.Name);
+                });
+                setRatingData(filteredData);
             }
             catch (error) {
                 console.error("Error fetching rating data", error);
@@ -21,7 +26,8 @@ const useRatingData = () => {
         fetchAllUsers();
     }, []);
 
-    const itemsPerPage = 13;
+    const itemsPerPage = 14;
+
     const totalUsers = ratingData ? ratingData.length : 0;
     const indexOfLastUser = currentPageUser * itemsPerPage;
     const indexOfFirstUser = indexOfLastUser - itemsPerPage;
