@@ -4,28 +4,6 @@
     margin: 15px 10px;
 }
 
-.mobile__rating_season{
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    background-color: #f2f2f2;
-
-    span {
-        margin-right: 20px;
-        font-size: 18px;
-        font-weight: 600;
-    }
-
-    select{
-        text-align: center;
-        width: 200px;
-        padding: 10px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        background-color: #fff;
-    }
-}
-
 .rating__title{
     font-size: 24px;
     font-weight: 700;
@@ -55,7 +33,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 5px;
+    bottom: 15px;
     left: 55%;
 }
 

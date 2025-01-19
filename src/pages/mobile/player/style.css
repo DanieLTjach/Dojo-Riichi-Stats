@@ -3,27 +3,6 @@
     background-color: #f2f2f2;
 }
 
-.app__main_player_season{
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    background-color: #f2f2f2;
-
-    span {
-        font-size: 18px;
-        font-weight: 600;
-    }
-
-    select{
-        text-align: center;
-        width: 200px;
-        padding: 10px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        background-color: #fff;
-    }
-}
-
 .mobile__main_player_title{
     font-size: 1.5rem;
     font-weight: 700;

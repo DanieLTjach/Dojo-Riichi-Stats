@@ -4,28 +4,6 @@
     margin: 20px 10px;
 }
 
-.mobile__rating_season{
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    background-color: #f2f2f2;
-
-    span {
-        font-size: 18px;
-        font-weight: 600;
-    }
-
-    select{
-        margin-right: 20px;
-        text-align: center;
-        width: 200px;
-        padding: 10px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        background-color: #fff;
-    }
-}
-
 .mobile__rating_title{
     font-size: 24px;
     font-weight: 700;
