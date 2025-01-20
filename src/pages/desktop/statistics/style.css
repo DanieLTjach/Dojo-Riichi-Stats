@@ -33,7 +33,7 @@
     grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
     gap: 20px;
     justify-items: center;
-    padding: 10px 35px;
+    padding: 20px 35px;
 }
 
 .pagination__btn{
