@@ -9,7 +9,9 @@ export const playerEmojis = {
   'Ihor Strumetskyi': '💎',
   'Kyrylo D': '🦉',
   'Anna': '🌿',
-  'Artur Berestenko': '🌚'
+  'Artur Berestenko': '🌚',
+  'Danylo Tkach': '👹',
+  'Maria': '🦊'
 };
 
 export const addEmojiToName = (playerName) => {
