@@ -6,6 +6,7 @@ import Results from "./pages/mobile/results/Results";
 import Statistics from "./pages/mobile/statistics/Statistics";
 import Player from "./pages/mobile/player/Player";
 import Rating from "./pages/mobile/rating/Rating";
+import Resources from "./pages/mobile/resources/Resources";
 import { addEmojiToName } from './entities/utils/playerEmojis';
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
             });
             setPlayerList(filteredData);
         } catch (error) {
-            console.error("Ошибка: " + error);
+            console.error("Помилка: " + error);
         }
     }
     useEffect(() => {
@@ -42,6 +43,7 @@ function App() {
                         <Route path="/statistics" element={<Statistics playerList={playerList} />} />
                         <Route path="/player/:id" element={<Player playerList={playerList} />} />
                         <Route path="/rating" element={<Rating />} />
+                        <Route path="/resources" element={<Resources />} />
                     </Routes>
                 </div>
             </div>

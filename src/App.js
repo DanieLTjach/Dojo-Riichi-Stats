@@ -7,6 +7,7 @@ import Statistics from "./pages/desktop/statistics/Statistics";
 import Results from "./pages/desktop/results/Results";
 import Player from "./pages/desktop/player/Player";
 import Rating from "./pages/desktop/rating/Rating";
+import Resources from "./pages/desktop/resources/Resources";
 import { addEmojiToName } from './entities/utils/playerEmojis';
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
               <Route path="/statistics" element={<Statistics playerList={playerList}/>} />
               <Route path="/player/:id" element={<Player playerList={playerList}/>} />
               <Route path="/rating" element={<Rating />} />
+              <Route path="/resources" element={<Resources />} />
             </Routes>
 
         </div>
