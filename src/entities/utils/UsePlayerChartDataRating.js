@@ -1,21 +1,34 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const UsePlayerChartDataRating = (player) => {
-    const [chartData, setChartData] = useState({
-        labels: player.playerStats.ratingChange.map((ratingChange) => ratingChange.date),
-        datasets: [
-            {
-                label: "Rating Change",
-                data: player.playerStats.ratingChange.map((ratingChange) => ratingChange.change),
-                borderColor: "red",
-                backgroundColor: "red",
-                pointBackgroundColor: "red",
-                pointBorderColor: "red",
-            },
-        ],
+export default function usePlayerChartDataRating(player) {
+  const [chartData, setChartData] = useState({
+    labels: [],
+    datasets: [],
+  });
+
+  useEffect(() => {
+    if (!player || !player.playerStats) {
+      setChartData({
+        labels: [],
+        datasets: [],
+      });
+      return;
+    }
+
+    setChartData({
+      labels: player.playerStats.ratingChange.map((rc) => rc.date),
+      datasets: [
+        {
+          label: "Rating Change",
+          data: player.playerStats.ratingChange.map((rc) => rc.change),
+          borderColor: "red",
+          backgroundColor: "red",
+          pointBackgroundColor: "red",
+          pointBorderColor: "red",
+        },
+      ],
     });
+  }, [player]);
 
-    return chartData;
-};
-
-export default UsePlayerChartDataRating;
+  return chartData;
+}
