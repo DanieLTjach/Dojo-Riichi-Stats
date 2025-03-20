@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 import trendChartData from "../../../entities/utils/UsePlayerChartDataTrend";
 import ratingChartData from "../../../entities/utils/UsePlayerChartDataRating";
 import Chart from "chart.js/auto";
@@ -11,22 +12,35 @@ Chart.register(CategoryScale);
 
 const Player = ({ playerList }) => {
 
+    const [activeView, setActiveView] = useState("trend");
+
     const { id } = useParams();
-
-    const player = playerList.find(player => player.id === id);
-
-    if(!player) {
-        return <p className="loader">Завантаження...</p>
-    }
-
+    const player = playerList.find((p) => p.id === id);
+  
     const chartDataTrend = trendChartData(player);
     const chartDataRating = ratingChartData(player);
-
+  
+    if (!player) {
+      return <p className="loader">Завантаження...</p>;
+    }
+    
     return (
         <main className="app__main_player">
             <div className="app__main_player_title">{player.name}: {player.id}</div>
+            <div className="app__main_player_toggle">
+                <button 
+                    className={activeView === 'trend' ? 'active' : ''} 
+                    onClick={() => setActiveView('trend')}>
+                    Тренди
+                </button>
+                <button 
+                    className={activeView === 'rating' ? 'active' : ''} 
+                    onClick={() => setActiveView('rating')}>
+                    Рейтинг
+                </button>
+            </div>
             <div className="app__main_player_content">
-                <div className="app__main_player_trends">
+                <div className={`app__main_player_trends ${activeView !== 'trend' ? 'hidden' : ''}`}>
                     <LineChartTrend chartData={chartDataTrend}/>
                     <h2>Статистика гравця:</h2>
                     <p>Місце у рейтингу: {player.playerStats.place}</p>
@@ -34,7 +48,7 @@ const Player = ({ playerList }) => {
                     <p>Кількість ігр: {player.playerStats.gamesPlayed}</p>
                     <p>Soul ID гравця: {player.playerStats.soulID}</p>
                 </div>
-                <div className="app__main_player_raitingChange">
+                <div className={`app__main_player_raitingChange ${activeView !== 'rating' ? 'hidden' : ''}`}>
                     <LineChartRating chartData={chartDataRating}/>
                     <div className="app__main_player_raitingChange_info">
                         <div>
@@ -66,3 +80,4 @@ const Player = ({ playerList }) => {
 }
 
 export default Player;
+
