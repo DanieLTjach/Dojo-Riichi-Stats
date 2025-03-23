@@ -5,7 +5,7 @@ import "./style.css";
 
 const Statistics = ({ playerList }) => {
     const [currentPage, setCurrentPage] = useState(1);
-    const [sortOption, setSortOption] = useState("default");
+    const [sortOption, setSortOption] = useState("active");
     const itemsPerPage = 25;
 
     const { sortedItems, totalItems } = usePlayerPagination(playerList, sortOption, currentPage, itemsPerPage);
