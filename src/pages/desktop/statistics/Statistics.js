@@ -22,9 +22,9 @@ return (
         <div className="app__main_statistics_title">
             <h1>Гравці</h1>
             <select onChange={handleSortChange} value={sortOption}>
-                <option value="default">По замовчуванню</option>
-                <option value="active">Від великої кількості ігор до меншого</option>
-                <option value="inactive">Від меншої кількості ігор до більшої</option>
+                <option value="default">За замовчуванням</option>
+                <option value="active">Зіграли найбільше</option>
+                <option value="inactive">Зіграли найменше</option>
             </select>
         </div>
         <div className="players">

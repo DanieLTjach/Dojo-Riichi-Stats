@@ -20,6 +20,7 @@ const PopupMenu = () => {
                 <span></span>
                 <span></span>
                 <span></span>
+                <span></span>
                 <ul id="menu">
                     <li>
                         <NavLink to="/" onClick={handleLinkClick}>
@@ -35,6 +36,11 @@ const PopupMenu = () => {
                         <NavLink to="/rating" onClick={handleLinkClick}>
                             <label for="menuCheckbox">Загальний рейтинг</label>
                         </NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/resources" onClick={handleLinkClick}>
+                          <label for="menuCheckbox">Навчальні матеріали</label>
+                      </NavLink>
                     </li>
                 </ul>
             </div>
