@@ -5,7 +5,7 @@ import PlayersCard from "../../../components/mobile/playersCard/PlayersCard";
 import "./style.css";
 
 const Statistics = ({ playerList }) => {
-    const [sortOption, setSortOption] = useState("default");
+    const [sortOption, setSortOption] = useState("active");
 
     const { sortedItems } = usePlayerPagination(playerList, sortOption, 1, playerList.length);
 
