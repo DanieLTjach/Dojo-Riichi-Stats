@@ -11,7 +11,8 @@ export const playerEmojis = {
   'Anna': '🌿',
   'Artur Berestenko': '🌚',
   'Danylo Tkach': '👹',
-  'Maria': '🦊'
+  'Maria': '🦊',
+  'Anton Martynenko': '🦐'
 };
 
 export const addEmojiToName = (playerName) => {
