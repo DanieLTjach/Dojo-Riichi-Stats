@@ -12,7 +12,15 @@ export const playerEmojis = {
   'Artur Berestenko': '🌚',
   'Danylo Tkach': '👹',
   'Maria': '🦊',
-  'Anton Martynenko': '🦐'
+  'Anton Martynenko': '🦐',
+  'Nastya L': '🐈‍⬛',
+  'Daniel Tsyporin': '🐆',
+  'Pavlo M': '🥀',
+  'Sasha': '🍄',
+  'Ivan': '💢',
+  'Valerii Bohdanov': '🕸',
+  'Victoria Sh': '🫶',
+  'Mariia B': '🐳'
 };
 
 export const addEmojiToName = (playerName) => {
