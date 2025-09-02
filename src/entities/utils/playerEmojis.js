@@ -19,7 +19,7 @@ export const playerEmojis = {
   'Sasha': '🍄',
   'Ivan': '💢',
   'Valerii Bohdanov': '🕸',
-  'Victoria Sh': '🫶',
+  'Victoria Sh': '🌸',
   'Mariia B': '🐳'
 };
 
