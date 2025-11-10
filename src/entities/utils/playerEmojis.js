@@ -20,7 +20,8 @@ export const playerEmojis = {
   'Ivan': '💢',
   'Valerii Bohdanov': '🕸',
   'Victoria Sh': '🌸',
-  'Mariia B': '🐳'
+  'Mariia B': '🐳',
+  'Viktor K': '🎲'
 };
 
 export const addEmojiToName = (playerName) => {
