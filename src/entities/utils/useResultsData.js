@@ -57,6 +57,8 @@ const useResultsData = () => {
         getResultsUser();
     }, []);
 
+    userList.sort((a, b) => b.RatingChange - a.RatingChange);
+
     // Pagination logic for users
     const itemsPerPageUser = 8;
     const totalUsers = userList.length;
