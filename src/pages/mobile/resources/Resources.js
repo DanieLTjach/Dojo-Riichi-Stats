@@ -45,6 +45,10 @@ const Resources = () => {
         ],
         "Міні-ігри та тренажери": [
             {
+                title: "RIICHI SCORES TRAINER",
+                url: "https://vince.id.au/mahjong.horneds.com/"
+            },
+            {
                 title: "Міні-гра усі бамбуки",
                 url: "https://www.gamedesign.jp/games/bamboo/"
             },
