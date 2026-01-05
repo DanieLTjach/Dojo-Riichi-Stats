@@ -34,12 +34,20 @@ const Resources = () => {
                 url: "https://files.riichi.moe/mjg/books%20(jp)/"
             },
             {
+                title: "136 Ready-to-Use Mahjong Strategy and Tactics",
+                url: "https://play.google.com/store/books/details/136_Ready_to_Use_Mahjong_Strategy_and_Tactics?id=UjCIEQAAQBAJ&hl=en&pli=1"
+            },
+            {
                 title: "Кобаяші Ґо - Супер цифровий маджонґ",
                 url: "https://natsuai.com/mahjong/digital/"
             }
 
         ],
         "Міні-ігри та тренажери": [
+            {
+                title: "RIICHI SCORES TRAINER",
+                url: "https://vince.id.au/mahjong.horneds.com/"
+            },
             {
                 title: "Міні-гра усі бамбуки",
                 url: "https://www.gamedesign.jp/games/bamboo/"
